@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	</head>
+	<body>
+	<script type="text/javascript">
+		console.log("init");
+		//document.getElementById("right").src="./cover.html";
+		//document.getElementById('rightDiv').width=;
+		function changeFrame(url){
+			document.getElementById("right").src=url;
+		}
+		function calcHeight(){
+			document.getElementById('right').height=window.screen.availHeight*0.9;
+			document.getElementById('right').style.overflow = "hidden";
+			
+			
+		}
+	</script>
+		<div style="width:300px;float:left;">
+			<h1 onclick="javascript:changeFrame('./cover/cover.html')">양광교회 50년사</h1>
+			<br>
+			<h3>목차</h1>
+			<ul>
+				<li onclick="javascript:changeFrame('./01/index.html')">섬기는 사람들</li>
+				<li onclick="javascript:changeFrame('./02/index.html')">시작하는 말</li>
+				<li onclick="javascript:changeFrame('./03/index.html')">제1편 형성</li>
+				<li onclick="javascript:changeFrame('./04/index.html')">제2편 건축</li>
+				<li onclick="javascript:changeFrame('./05/index.html')">제3편 사역</li>
+				<li onclick="javascript:changeFrame('./06/index.html')">제4편 확장</li>
+				<li onclick="javascript:changeFrame('./07/index.html')">제5편 실록</li>
+				<li onclick="javascript:changeFrame('./08/index.html')">족적</li>
+			</ul>							
+		</div>
+			<div id="rightDiv" style="float:right;width:80%">
+				<iframe id="right" style="display:block;width:100%;border:none;" onload="calcHeight();" src="./cover/cover.html"></iframe>
+			</div>
+		</div>
+	</body>
+
+</html>
